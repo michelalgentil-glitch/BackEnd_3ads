@@ -1,0 +1,203 @@
+/* ==========================================================================
+   RESET E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #262626; /* Cor escura de fundo do navegador */
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   BARRA DE AVISO E CABEÇALHO (Fiel ao seu print)
+   ========================================================================== */
+.top-bar {
+    background-color: #000000;
+    color: #ccff00; /* Verde limão vibrante do botão */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.main-header {
+    background-color: #000000;
+    padding: 25px 0;
+    border-bottom: 1px solid #333333;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: 'Georgia', Times, serif; /* Fonte com serifa elegante idêntica à imagem */
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover, 
+.nav-menu a.active {
+    color: #ccff00; /* Destaque verde-limão */
+}
+
+/* ==========================================================================
+   SEÇÃO HERO (Fundo cinza integrado idêntico ao seu Banner)
+   ========================================================================== */
+.about-hero {
+    background-color: #5c5c5c; /* O tom de cinza exato do seu bloco principal */
+    padding: 100px 40px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.hero-subtitle {
+    color: #ccff00;
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    max-width: 700px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 600px;
+    color: #e0e0e0;
+}
+
+/* ==========================================================================
+   CONTEÚDO ABAIXO DO HERO (Fundo claro das categorias)
+   ========================================================================== */
+.about-main {
+    background-color: #ffffff; 
+    color: #1a1a1a;
+    padding: 80px 40px;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #000000;
+    letter-spacing: 1px;
+}
+
+.section-title .line {
+    width: 50px;
+    height: 4px;
+    background-color: #ccff00;
+    margin: 15px auto 0 auto;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444444;
+    margin-bottom: 15px;
+}
+
+.about-image {
+    background-color: #5c5c5c;
+    border-radius: 4px;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (Celulares e Tablets)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
