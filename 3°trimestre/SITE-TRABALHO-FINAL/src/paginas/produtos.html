@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Urban Montion</title>
+    <style>
+        /* RESET E CONFIGURAÇÕES GERAIS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #262626;
+            color: #ffffff;
+        }
+
+        /* TOP BANNER */
+        .top-banner {
+            background-color: #000000;
+            color: #ccff00;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* HEADER & NAVEGAÇÃO */
+        header {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: #ccff00;
+        }
+
+        .cart-icon {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .cart-count {
+            background-color: #ccff00;
+            color: #000000;
+            border-radius: 50%;
+            padding: 2px 7px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* HERO / INTRODUÇÃO DA PÁGINA */
+        .page-header {
+            max-width: 1200px;
+            margin: 40px auto 20px auto;
+            padding: 0 20px;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .page-header p {
+            color: #b3b3b3;
+            font-size: 1.1rem;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+
+        /* GRID DE PRODUTOS */
+        .products-container {
+            max-width: 1200px;
+            margin: 0 auto 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* CARD DE PRODUTO */
+        .product-card {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: #ccff00;
+        }
+
+        /* Espaço reservado para a Imagem do Produto */
+        .product-image-placeholder {
+            width: 100%;
+            height: 320px;
+            background-color: #333333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .product-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #ccff00;
+            margin-bottom: 4px;
+        }
+
+        .product-category {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #888888;
+            margin-bottom: 12px;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.3;
+            min-height: 50px;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 20px;
+            margin-top: auto;
+        }
+
+        /* BOTÃO ADICIONAR AO CARRINHO */
+        .btn-add-cart {
+            background-color: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        .btn-add-cart:hover {
+            background-color: #ccff00;
+            color: #000000;
+            border-color: #ccff00;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #1a1a1a;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #888888;
+            border-top: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BANNER -->
+    <div class="top-banner">
+        🔥 Frete grátis em compras acima de R$ 499,90 🔥
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">Urban Montion.</div>
+        <nav class="nav-menu">
+            <a href="/">Início</a>
+            <a href="/produtos" class="active">Produtos</a>
+            <a href="/sobre">Sobre Nós</a>
+            <a href="/contato">Contato</a>
+        </nav>
+        <div class="cart-icon">
+            <span>🛒</span>
+            <span class="cart-count">0</span>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-header">
+        <h1>Produtos</h1>
+        <p>Kits exclusivos, moletons pesados e os tênis mais raros do mercado prontos para o seu drop.</p>
+    </section>
+
+    <!-- GRID DE PRODUTOS -->
+    <main class="products-container">
+
+        <!-- PRODUTO 1 -->
+        <article class="product-card">
+            <img src="../../imagens/conjunto2.webp"
+            <div class="product-image-placeholder"></div>
+            <div class="product-info">
+                <span class="product-tag">Heavyweight</span>
+                <span class="product-category">Moletons</span>
+                <h2 class="product-title">CONJUNTO NK TECH FLEECE</h2>
+                <div class="product-price">R$ 349,90</div>
+                <button class="btn-add-cart">Adicionar ao Carrinho</button>
+            </div>
+        </article>
+
+        <!-- PRODUTO 2 -->
+        <article class="product-card">
+            <img src="../../imagens/tenis2.webp"
+            <div class="product-image-placeholder"></div>
+            <div class="product-info">
+                <span class="product-tag">Raro</span>
+                <span class="product-category">Tênis</span>
+                <h2 class="product-title">TÊNIS NK AIR MAX 95 CORTEIZ"</h2>
+                <div class="product-price">R$ 899,90</div>
+                <button class="btn-add-cart">Adicionar ao Carrinho</button>
+            </div>
+        </article>
+
+        <!-- PRODUTO 3 -->
+        <article class="product-card">
+            <div class="product-image-placeholder">Exclusivo [ Tracksuit ]</div>
+            <div class="product-info">
+                <span class="product-tag">Exclusivo</span>
+                <span class="product-category">Kits</span>
+                <h2 class="product-title">Conjunto Tracksuit Urban Cyber</h2>
+                <div class="product-price">R$ 549,90</div>
+                <button class="btn-add-cart">Adicionar ao Carrinho</button>
+            </div>
+        </article>
+
+        <!-- PRODUTO 4 -->
+        <article class="product-card">
+            <div class="product-image-placeholder">[ Hoodie ]</div>
+            <div class="product-info">
+                <span class="product-tag">Novo Drop</span>
+                <span class="product-category">Moletons</span>
+                <h2 class="product-title">Moletom Canguru Moss Green</h2>
+                <div class="product-price">R$ 319,90</div>
+                <button class="btn-add-cart">Adicionar ao Carrinho</button>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Urban Montion. Todos os direitos reservados. Design Urbano que te destaca.</p>
+    </footer>
+
+</body>
+</html>
