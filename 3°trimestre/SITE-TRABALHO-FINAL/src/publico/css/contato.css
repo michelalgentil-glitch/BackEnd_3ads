@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #0b0b0b !important;
+    color: #ffffff !important;
+    overflow-x: hidden;
+}
+
+.top-banner {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.top-banner span {
+    color: #adff2f;
+}
+
+.main-header {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.logo span {
+    color: #adff2f;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0 15px;
+}
+
+.nav-menu a:hover, 
+.nav-menu a.active {
+    color: #adff2f;
+}
+
+.cart-icon {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.cart-icon .badge {
+    background-color: #adff2f;
+    color: #000000;
+    font-size: 11px;
+    font-weight: 900;
+    padding: 2px 7px;
+    border-radius: 50%;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
+}
+
+.contact-header .subtitle {
+    color: #adff2f;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.contact-header h1 {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.contact-header p {
+    color: #888888;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.contact-form {
+    background-color: #121212;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #1f1f1f;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #aaaaaa;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    padding: 14px 16px;
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #adff2f;
+    color: #000000;
+    border: none;
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+    border-radius: 6px;
+}
