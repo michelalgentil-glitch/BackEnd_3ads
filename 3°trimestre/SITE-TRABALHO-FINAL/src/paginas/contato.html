@@ -1,266 +1,150 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Urban Montion.</title>
-    <!-- Importação da fonte para o visual streetwear moderno -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    
-    <style>
-        /* RESET DE ESTILOS */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
 
-        body {
-            background-color: #0b0b0b !important;
-            color: #ffffff !important;
-            overflow-x: hidden;
-        }
+    <title>Contato - Urban Montion</title>
 
-        /* FAIXA DE FRETE GRÁTIS */
-        .top-banner {
-            background-color: #000000;
-            color: #ffffff;
-            text-align: center;
-            padding: 10px 0;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-        .top-banner span {
-            color: #adff2f;
-        }
+    <!-- Importação da fonte Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        /* CABEÇALHO / NAVEGAÇÃO */
-        .main-header {
-            background-color: #000000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 25px 8%;
-        }
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+        rel="stylesheet"
+    >
 
-        .logo {
-            font-size: 22px;
-            font-weight: 900;
-            letter-spacing: -0.5px;
-        }
-
-        .logo span {
-            color: #adff2f;
-        }
-
-        .nav-menu a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 700;
-            margin: 0 15px;
-            letter-spacing: 0.5px;
-            transition: color 0.2s;
-        }
-
-        .nav-menu a:hover, 
-        .nav-menu a.active {
-            color: #adff2f;
-        }
-
-        .cart-icon {
-            position: relative;
-            cursor: pointer;
-            font-weight: 700;
-            font-size: 14px;
-        }
-
-        .cart-icon .badge {
-            background-color: #adff2f;
-            color: #000000;
-            font-size: 11px;
-            font-weight: 900;
-            padding: 2px 7px;
-            border-radius: 50%;
-            margin-left: 5px;
-        }
-
-        /* CONTAINER PRINCIPAL */
-        .contact-container {
-            max-width: 1200px;
-            margin: 80px auto;
-            padding: 0 40px;
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 80px;
-            align-items: start;
-        }
-
-        /* TEXTO DE APOIO (ESQUERDA) */
-        .contact-header .subtitle {
-            color: #adff2f;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            display: block;
-            margin-bottom: 20px;
-        }
-
-        .contact-header h1 {
-            font-size: 48px;
-            font-weight: 900;
-            line-height: 1.1;
-            letter-spacing: -1.5px;
-            margin-bottom: 25px;
-        }
-
-        .contact-header p {
-            color: #888888;
-            font-size: 15px;
-            line-height: 1.6;
-            max-width: 450px;
-        }
-
-        /* FORMULÁRIO (DIREITA) */
-        .contact-form {
-            background-color: #121212;
-            padding: 40px;
-            border-radius: 8px;
-            border: 1px solid #1f1f1f;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-            color: #aaaaaa;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            background-color: #1a1a1a;
-            border: 1px solid #2a2a2a;
-            padding: 14px 16px;
-            color: #ffffff;
-            font-size: 14px;
-            border-radius: 6px;
-            transition: border-color 0.2s, background-color 0.2s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #adff2f;
-            background-color: #1f1f1f;
-        }
-
-        /* BOTÃO DE AÇÃO */
-        .btn-submit {
-            width: 100%;
-            background-color: #adff2f;
-            color: #000000;
-            border: none;
-            padding: 16px;
-            font-size: 14px;
-            font-weight: 900;
-            letter-spacing: 0.5px;
-            cursor: pointer;
-            border-radius: 6px;
-            transition: transform 0.1s, background-color 0.2s;
-        }
-
-        .btn-submit:hover {
-            background-color: #96dc28;
-            transform: translateY(-2px);
-        }
-
-        .btn-submit:active {
-            transform: translateY(0);
-        }
-
-        /* RESPONSIVIDADE */
-        @media (max-width: 900px) {
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-            
-            .contact-header h1 {
-                font-size: 36px;
-            }
-            
-            .main-header {
-                flex-direction: column;
-                gap: 20px;
-                padding: 20px;
-            }
-        }
-    </style>
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="../../css/contato.css">
 </head>
+
 <body>
 
-    <!-- Faixa de Frete Grátis -->
+    <!-- Faixa de frete grátis -->
     <div class="top-banner">
-        🔥 FRETE GRÁTIS EM COMPRAS ACIMA DE <span>R$ 499,90</span> 🔥
+        🔥 FRETE GRÁTIS EM COMPRAS ACIMA DE
+        <span>R$ 499,90</span> 🔥
     </div>
 
-    <!-- Cabeçalho / Navegação -->
+    <!-- Cabeçalho e navegação -->
     <header class="main-header">
-        <div class="logo">Urban Montion<span>.</span></div>
-        <nav class="nav-menu">
-            <a href="#">INÍCIO</a>
-            <a href="#">PRODUTOS</a>
-            <a href="#">SOBRE NÓS</a>
-            <a href="#" class="active">CONTATO</a>
+
+        <div class="logo">
+            Urban Montion<span>.</span>
+        </div>
+
+        <nav class="nav-menu" aria-label="Navegação principal">
+            <a href="/">INÍCIO</a>
+            <a href="/produtos">PRODUTOS</a>
+            <a href="/sobre">SOBRE NÓS</a>
+            <a href="/contato" class="active" aria-current="page">
+                CONTATO
+            </a>
         </nav>
+
         <div class="cart-icon">
             SACOLA <span class="badge">0</span>
         </div>
+
     </header>
 
-    <!-- Seção Principal de Contato -->
+    <!-- Conteúdo principal -->
     <main class="contact-container">
-        <div class="contact-content">
-            <div class="contact-header">
-                <span class="subtitle">NOVA COLEÇÃO STREETWEAR</span>
-                <h1>O DESIGN URBANO<br>QUE TE CONECTA</h1>
-                <p>Kits exclusivos, moletons pesados e suporte direto com a nossa equipe prontos para o seu drop.</p>
-            </div>
 
-            <form class="contact-form" onsubmit="event.preventDefault(); alert('Mensagem enviada!');">
+        <div class="contact-content">
+
+            <!-- Texto de apresentação -->
+            <section class="contact-header">
+
+                <span class="subtitle">
+                    NOVA COLEÇÃO STREETWEAR
+                </span>
+
+                <h1>
+                    O DESIGN URBANO<br>
+                    QUE TE CONECTA
+                </h1>
+
+                <p>
+                    Kits exclusivos, moletons pesados e suporte direto
+                    com a nossa equipe, prontos para o seu drop.
+                    Entre em contato conosco!
+                </p>
+
+            </section>
+
+            <!-- Formulário de contato -->
+            <form
+                class="contact-form"
+                id="contactForm"
+            >
+
                 <div class="form-group">
                     <label for="name">NOME COMPLETO</label>
-                    <input type="text" id="name" placeholder="Ex: João Silva" required>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Ex: João Silva"
+                        autocomplete="name"
+                        required
+                    >
                 </div>
 
                 <div class="form-group">
                     <label for="email">E-MAIL</label>
-                    <input type="email" id="email" placeholder="seu-email@dominio.com" required>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="seu-email@dominio.com"
+                        autocomplete="email"
+                        required
+                    >
                 </div>
 
                 <div class="form-group">
                     <label for="message">MENSAGEM</label>
-                    <textarea id="message" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Escreva sua mensagem aqui..."
+                        required
+                    ></textarea>
                 </div>
 
-                <button type="submit" class="btn-submit">ENVIAR MENSAGEM</button>
+                <button type="submit" class="btn-submit">
+                    ENVIAR MENSAGEM
+                </button>
+
+                <p id="formStatus" role="status" aria-live="polite"></p>
+
             </form>
+
         </div>
+
     </main>
+
+    <!-- Envio demonstrativo do formulário -->
+    <script>
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            formStatus.textContent =
+                'Formulário preenchido! O envio real precisa ser conectado a um servidor ou serviço de mensagens.';
+
+            contactForm.reset();
+        });
+    </script>
 
 </body>
 </html>

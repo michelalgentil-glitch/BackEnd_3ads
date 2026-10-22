@@ -1,3 +1,5 @@
+
+/* RESET DE ESTILOS */
 * {
     margin: 0;
     padding: 0;
@@ -6,11 +8,12 @@
 }
 
 body {
-    background-color: #0b0b0b !important;
-    color: #ffffff !important;
+    background-color: #0b0b0b;
+    color: #ffffff;
     overflow-x: hidden;
 }
 
+/* FAIXA DE FRETE GRÁTIS */
 .top-banner {
     background-color: #000000;
     color: #ffffff;
@@ -21,10 +24,13 @@ body {
     letter-spacing: 1px;
 }
 
-.top-banner span {
+.top-banner span,
+.logo span,
+.contact-header .subtitle {
     color: #adff2f;
 }
 
+/* CABEÇALHO */
 .main-header {
     background-color: #000000;
     display: flex;
@@ -36,10 +42,7 @@ body {
 .logo {
     font-size: 22px;
     font-weight: 900;
-}
-
-.logo span {
-    color: #adff2f;
+    letter-spacing: -0.5px;
 }
 
 .nav-menu a {
@@ -48,13 +51,16 @@ body {
     font-size: 13px;
     font-weight: 700;
     margin: 0 15px;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
 }
 
-.nav-menu a:hover, 
+.nav-menu a:hover,
 .nav-menu a.active {
     color: #adff2f;
 }
 
+/* SACOLA */
 .cart-icon {
     font-weight: 700;
     font-size: 14px;
@@ -67,8 +73,10 @@ body {
     font-weight: 900;
     padding: 2px 7px;
     border-radius: 50%;
+    margin-left: 5px;
 }
 
+/* CONTEÚDO DE CONTATO */
 .contact-container {
     max-width: 1200px;
     margin: 80px auto;
@@ -79,10 +87,10 @@ body {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     gap: 80px;
+    align-items: start;
 }
 
 .contact-header .subtitle {
-    color: #adff2f;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -94,6 +102,7 @@ body {
     font-size: 48px;
     font-weight: 900;
     line-height: 1.1;
+    letter-spacing: -1.5px;
     margin-bottom: 25px;
 }
 
@@ -101,8 +110,10 @@ body {
     color: #888888;
     font-size: 15px;
     line-height: 1.6;
+    max-width: 450px;
 }
 
+/* FORMULÁRIO */
 .contact-form {
     background-color: #121212;
     padding: 40px;
@@ -118,6 +129,7 @@ body {
     display: block;
     font-size: 11px;
     font-weight: 700;
+    letter-spacing: 1px;
     margin-bottom: 10px;
     color: #aaaaaa;
 }
@@ -133,6 +145,14 @@ body {
     border-radius: 6px;
 }
 
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #adff2f;
+    background-color: #1f1f1f;
+}
+
+/* BOTÃO */
 .btn-submit {
     width: 100%;
     background-color: #adff2f;
@@ -141,6 +161,55 @@ body {
     padding: 16px;
     font-size: 14px;
     font-weight: 900;
+    letter-spacing: 0.5px;
     cursor: pointer;
     border-radius: 6px;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #96dc28;
+    transform: translateY(-2px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 900px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .contact-header h1 {
+        font-size: 36px;
+    }
+
+    .main-header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        margin: 0;
+    }
+
+    .contact-container {
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
 }
